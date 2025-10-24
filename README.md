@@ -6,7 +6,7 @@ Welcome to my analytics repository where I showcase my skills in Excel, Power BI
 
 - 🔭 I’m currently working on **Power BI dashboard for a chain of dental offices visualizing inventory trends.**
 
-- 🌱 I’m currently learning **Power BI**
+- 🌱 I’m currently learning **Power BI, Excel, SQL**
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
