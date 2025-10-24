@@ -1,2 +1,2 @@
 # data-analytics-portfolio
-Welcome to my analytics portfolio where I showcase my skills in Excel, Power BI, and SQL.
+Welcome to my analytics repository where I showcase my skills in Excel, Power BI, and SQL through Excel reports, visualizations, SQL projects, and PowerBI dashboards. The projects demonstrate my growing proficiency in transforming raw data into actionable insights, improving workflow efficiency, and automating tasks. Through this portfolio, I look to provide an insight into how I have experimented with new tools over the past couple of years and always striving to improve my work.
