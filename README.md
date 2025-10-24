@@ -4,7 +4,7 @@
 
 Welcome to my analytics repository where I showcase my skills in Excel, Power BI, and SQL through Excel reports, visualizations, SQL projects, and PowerBI dashboards. The projects demonstrate my growing proficiency in transforming raw data into actionable insights, improving workflow efficiency, and automating tasks. Through this portfolio, I look to provide an insight into how I have experimented with new tools over the past couple of years and always striving to improve my work.
 
-- 🔭 I’m currently working on **Power BI dashboard for a chain of dental offices visualizing inventory trends.**
+- 🔭 I’m currently working on a **Power BI dashboard for a chain of dental offices visualizing inventory trends.**
 
 - 🌱 I’m currently learning **Power BI, Excel, SQL**
 
