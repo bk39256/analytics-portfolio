@@ -1,6 +1,6 @@
 
-# SQL Project 1 | Group 1
-Members: Ben Kim, Jackson Avey, Christian Hertzig, Success Onichabor, Drew Vajda
+# SQL Project 1 
+
 
 ## Scenario
 The task at hand is to model and build a relational database for the general operations of a network of bike stores. The central entity in the model is the Store entity, representing each individual location where bikes and related products are sold. Each store manages its stock of products, including details such as quantity, category, and brand. The system also tracks orders placed by customers, consisting of multiple order items tied to specific products. Additionally, employees are associated with each store to manage sales and inventory. The product detail entity provides descriptive information about each item, while the categories and brands entities classify and group products effectively. Our goal is to accurately model these relationships, populate the database with sample data, and perform queries that yield useful insights into sales performance, inventory management, and customer purchasing trends across all stores.
