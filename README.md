@@ -1,4 +1,4 @@
-# data-analytics-portfolio
+# analytics-portfolio
 <h1 align="center">Hello, my name is Ben</h1>
 <h3 align="center">A MIS student looking to improve their analytics and PM skills.</h3>
 
