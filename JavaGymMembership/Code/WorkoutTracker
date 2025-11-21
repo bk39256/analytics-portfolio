@@ -1,0 +1,22 @@
+import java.time.LocalDate;
+import java.util.ArrayList;
+
+public class WorkoutTracker {
+    private ArrayList<LocalDate> checkIns;
+
+    public WorkoutTracker() {
+        checkIns = new ArrayList<>();
+    }
+
+    public void checkIn() {
+        checkIns.add(LocalDate.now());
+        System.out.println("Check-in successful. QR Code scanned.");
+    }
+
+    public int getMonthlyWorkouts() {
+        LocalDate now = LocalDate.now();
+        return (int) checkIns.stream()
+            .filter(d -> d.getMonth() == now.getMonth() && d.getYear() == now.getYear())
+            .count();
+    }
+}
