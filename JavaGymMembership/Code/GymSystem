@@ -1,0 +1,64 @@
+import java.util.*;
+
+public class GymSystem {
+    private ArrayList<User> users;
+    private User currentUser;
+    private TrainerSchedule schedule;
+
+    public GymSystem() {
+        users = new ArrayList<>();
+        schedule = new TrainerSchedule();
+    }
+
+    public void createAccount(String username, String password) {
+        users.add(new User(username, password));
+        System.out.println("Account created successfully.");
+    }
+
+    public void signIn(String username, String password) {
+        for (User u : users) {
+            if (u.getUsername().equals(username) && u.getPassword().equals(password)) {
+                currentUser = u;
+                System.out.println("Signed in successfully.");
+                return;
+            }
+        }
+        System.out.println("Invalid credentials.");
+    }
+
+    public void signOut() {
+        currentUser = null;
+        System.out.println("Signed out.");
+    }
+
+    public void deleteAccount(String username) {
+        users.removeIf(u -> u.getUsername().equals(username));
+        System.out.println("Account deleted.");
+    }
+
+    public boolean isSignedIn() {
+        return currentUser != null;
+    }
+
+    public void updatePayment(String info) {
+        currentUser.setPaymentInfo(info);
+        System.out.println("Payment info updated.");
+    }
+
+    public void checkIn() {
+        currentUser.getTracker().checkIn();
+    }
+
+    public void viewWorkoutHistory() {
+        int count = currentUser.getTracker().getMonthlyWorkouts();
+        System.out.println("You have worked out " + count + " times this month.");
+    }
+
+    public void scheduleTrainer(int index, String slot) {
+        schedule.bookTrainer(index, slot);
+    }
+
+    public void showTrainerSchedule() {
+        schedule.displayTrainers();
+    }
+}
