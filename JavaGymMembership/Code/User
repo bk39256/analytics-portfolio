@@ -1,0 +1,28 @@
+public class User {
+    private String username;
+    private String password;
+    private String paymentInfo;
+    private WorkoutTracker tracker;
+
+    public User(String username, String password) {
+        this.username = username;
+        this.password = password;
+        this.tracker = new WorkoutTracker();
+        this.paymentInfo = "Not Set";
+    }
+
+    public String getUsername() { return username; }
+    public String getPassword() { return password; }
+
+    public void setPaymentInfo(String info) {
+        this.paymentInfo = info;
+    }
+
+    public String getPaymentInfo() {
+        return paymentInfo;
+    }
+
+    public WorrkoutTracker getTracker() {
+        return tracker;
+    }
+}
