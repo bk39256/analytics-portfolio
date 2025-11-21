@@ -1,0 +1,29 @@
+import java.util.ArrayList;
+
+public class TrainerSchedule {
+    private ArrayList<Trainer> trainers;
+
+    public TrainerSchedule() {
+        trainers = new ArrayList<>();
+        trainers.add(new Trainer("Alice"));
+        trainers.add(new Trainer("Bob"));
+    }
+
+    public void displayTrainers() {
+        int idx = 1;
+        for (Trainer t : trainers) {
+            System.out.println(idx + ". " + t.getName() + " - " + t.getAvailableSlots());
+            idx++;
+        }
+    }
+
+    public void bookTrainer(int trainerIndex, String slot) {
+        Trainer trainer = trainers.get(trainerIndex - 1);
+        if (trainer.getAvailableSlots().contains(slot)) {
+            trainer.bookSlot(slot);
+            System.out.println("Session booked with " + trainer.getName() + " at " + slot);
+        } else {
+            System.out.println("Slot unavailable.");
+        }
+    }
+}
