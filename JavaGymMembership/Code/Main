@@ -1,0 +1,67 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        GymSystem system = new GymSystem();
+        Scanner sc = new Scanner(System.in);
+        String choice;
+
+        while (true) {
+            if (!system.isSignedIn()) {
+                System.out.println("A - Sign In\nB - Create Account\nC - Delete Account\nD - Quit");
+                choice = sc.nextLine().toUpperCase();
+                switch (choice) {
+                    case "A":
+                        System.out.print("Username: ");
+                        String user = sc.nextLine();
+                        System.out.print("Password: ");
+                        String pass = sc.nextLine();
+                        system.signIn(user, pass);
+                        break;
+                    case "B":
+                        System.out.print("New Username: ");
+                        user = sc.nextLine();
+                        System.out.print("New Password: ");
+                        pass = sc.nextLine();
+                        system.createAccount(user, pass);
+                        break;
+                    case "C":
+                        System.out.print("Username to delete: ");
+                        user = sc.nextLine();
+                        system.deleteAccount(user);
+                        break;
+                    case "D":
+                        System.out.println("Goodbye!");
+                        return;
+                }
+            } else {
+                System.out.println("\nA - Update Payment Info\nB - Workout History\nC - Schedule Trainer\nD - Check In\nE - Sign Out");
+                choice = sc.nextLine().toUpperCase();
+                switch (choice) {
+                    case "A":
+                        System.out.print("Enter new payment info: ");
+                        String info = sc.nextLine();
+                        system.updatePayment(info);
+                        break;
+                    case "B":
+                        system.viewWorkoutHistory();
+                        break;
+                    case "C":
+                        system.showTrainerSchedule();
+                        System.out.print("Select trainer number: ");
+                        int idx = Integer.parseInt(sc.nextLine());
+                        System.out.print("Enter time slot: ");
+                        String slot = sc.nextLine();
+                        system.scheduleTrainer(idx, slot);
+                        break;
+                    case "D":
+                        system.checkIn();
+                        break;
+                    case "E":
+                        system.signOut();
+                        break;
+                }
+            }
+        }
+    }
+}
