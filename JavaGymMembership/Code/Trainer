@@ -1,0 +1,24 @@
+import java.util.ArrayList;
+public class Trainer {
+	private String name;
+    private ArrayList<String> availableSlots;
+
+    public Trainer(String name) {
+        this.name = name;
+        this.availableSlots = new ArrayList<>();
+        availableSlots.add("Monday 9AM");
+        availableSlots.add("Wednesday 3PM");
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public ArrayList<String> getAvailableSlots() {
+        return availableSlots;
+    }
+
+    public void bookSlot(String slot) {
+        availableSlots.remove(slot);
+    }
+}
